@@ -7,5 +7,6 @@ target 'MailerLite' do
 
   # Pods for MailerLite
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
 end
