@@ -14,6 +14,10 @@
 		85372C22221B06E100122BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85372C21221B06E100122BFD /* Assets.xcassets */; };
 		85372C25221B06E100122BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85372C23221B06E100122BFD /* LaunchScreen.storyboard */; };
 		85372C2E221B125600122BFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85372C2D221B125600122BFD /* GoogleService-Info.plist */; };
+		85372C35221B50FB00122BFD /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C34221B50FB00122BFD /* FirebaseService.swift */; };
+		85372C37221B51E800122BFD /* FirebaseServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C36221B51E800122BFD /* FirebaseServiceFactory.swift */; };
+		85372C39221B546600122BFD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C38221B546600122BFD /* Constants.swift */; };
+		85372C3C221B586500122BFD /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C3B221B586500122BFD /* Subscriber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		85372C24221B06E100122BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85372C26221B06E100122BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85372C2D221B125600122BFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85372C34221B50FB00122BFD /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		85372C36221B51E800122BFD /* FirebaseServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceFactory.swift; sourceTree = "<group>"; };
+		85372C38221B546600122BFD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		85372C3B221B586500122BFD /* Subscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
 		B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +79,8 @@
 		85372C19221B06DE00122BFD /* MailerLite */ = {
 			isa = PBXGroup;
 			children = (
-				85372C2C221B118500122BFD /* Resources */,
+				85372C3A221B585400122BFD /* Model */,
+				85372C33221B50EF00122BFD /* Services */,
 				85372C1A221B06DE00122BFD /* AppDelegate.swift */,
 				85372C1C221B06DE00122BFD /* ViewController.swift */,
 				85372C1E221B06DE00122BFD /* Main.storyboard */,
@@ -79,15 +88,26 @@
 				85372C23221B06E100122BFD /* LaunchScreen.storyboard */,
 				85372C26221B06E100122BFD /* Info.plist */,
 				85372C2D221B125600122BFD /* GoogleService-Info.plist */,
+				85372C38221B546600122BFD /* Constants.swift */,
 			);
 			path = MailerLite;
 			sourceTree = "<group>";
 		};
-		85372C2C221B118500122BFD /* Resources */ = {
+		85372C33221B50EF00122BFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				85372C34221B50FB00122BFD /* FirebaseService.swift */,
+				85372C36221B51E800122BFD /* FirebaseServiceFactory.swift */,
 			);
-			path = Resources;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		85372C3A221B585400122BFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85372C3B221B586500122BFD /* Subscriber.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CCF91D991085951363D42128 /* Pods */ = {
@@ -222,7 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85372C39221B546600122BFD /* Constants.swift in Sources */,
 				85372C1D221B06DE00122BFD /* ViewController.swift in Sources */,
+				85372C37221B51E800122BFD /* FirebaseServiceFactory.swift in Sources */,
+				85372C3C221B586500122BFD /* Subscriber.swift in Sources */,
+				85372C35221B50FB00122BFD /* FirebaseService.swift in Sources */,
 				85372C1B221B06DE00122BFD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
