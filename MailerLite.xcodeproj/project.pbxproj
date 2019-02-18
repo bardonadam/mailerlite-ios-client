@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4157513EC7BC834A5AE64521 /* Pods_MailerLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C557915191B993A1A05F8F0 /* Pods_MailerLite.framework */; };
 		85372C1B221B06DE00122BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C1A221B06DE00122BFD /* AppDelegate.swift */; };
 		85372C1D221B06DE00122BFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C1C221B06DE00122BFD /* ViewController.swift */; };
 		85372C20221B06DE00122BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85372C1E221B06DE00122BFD /* Main.storyboard */; };
 		85372C22221B06E100122BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85372C21221B06E100122BFD /* Assets.xcassets */; };
 		85372C25221B06E100122BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85372C23221B06E100122BFD /* LaunchScreen.storyboard */; };
+		85372C2E221B125600122BFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85372C2D221B125600122BFD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A4B26E27682137E2200D405 /* Pods-MailerLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.debug.xcconfig"; sourceTree = "<group>"; };
+		7C557915191B993A1A05F8F0 /* Pods_MailerLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MailerLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85372C17221B06DE00122BFD /* MailerLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailerLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85372C1A221B06DE00122BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85372C1C221B06DE00122BFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		85372C21221B06E100122BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85372C24221B06E100122BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85372C26221B06E100122BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85372C2D221B125600122BFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4157513EC7BC834A5AE64521 /* Pods_MailerLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		791F804268587DD0112A5540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C557915191B993A1A05F8F0 /* Pods_MailerLite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		85372C0E221B06DE00122BFD = {
 			isa = PBXGroup;
 			children = (
 				85372C19221B06DE00122BFD /* MailerLite */,
 				85372C18221B06DE00122BFD /* Products */,
+				CCF91D991085951363D42128 /* Pods */,
+				791F804268587DD0112A5540 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,32 @@
 		85372C19221B06DE00122BFD /* MailerLite */ = {
 			isa = PBXGroup;
 			children = (
+				85372C2C221B118500122BFD /* Resources */,
 				85372C1A221B06DE00122BFD /* AppDelegate.swift */,
 				85372C1C221B06DE00122BFD /* ViewController.swift */,
 				85372C1E221B06DE00122BFD /* Main.storyboard */,
 				85372C21221B06E100122BFD /* Assets.xcassets */,
 				85372C23221B06E100122BFD /* LaunchScreen.storyboard */,
 				85372C26221B06E100122BFD /* Info.plist */,
+				85372C2D221B125600122BFD /* GoogleService-Info.plist */,
 			);
 			path = MailerLite;
+			sourceTree = "<group>";
+		};
+		85372C2C221B118500122BFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCF91D991085951363D42128 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A4B26E27682137E2200D405 /* Pods-MailerLite.debug.xcconfig */,
+				B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85372C29221B06E100122BFD /* Build configuration list for PBXNativeTarget "MailerLite" */;
 			buildPhases = (
+				47A63C51F38C7DEE11FA5119 /* [CP] Check Pods Manifest.lock */,
 				85372C13221B06DE00122BFD /* Sources */,
 				85372C14221B06DE00122BFD /* Frameworks */,
 				85372C15221B06DE00122BFD /* Resources */,
+				37624DF3D856152725B4AADF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,12 +160,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				85372C25221B06E100122BFD /* LaunchScreen.storyboard in Resources */,
+				85372C2E221B125600122BFD /* GoogleService-Info.plist in Resources */,
 				85372C22221B06E100122BFD /* Assets.xcassets in Resources */,
 				85372C20221B06DE00122BFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37624DF3D856152725B4AADF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47A63C51F38C7DEE11FA5119 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MailerLite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85372C13221B06DE00122BFD /* Sources */ = {
@@ -280,6 +367,7 @@
 		};
 		85372C2A221B06E100122BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4B26E27682137E2200D405 /* Pods-MailerLite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +387,7 @@
 		};
 		85372C2B221B06E100122BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
