@@ -18,6 +18,19 @@
 		85372C37221B51E800122BFD /* FirebaseServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C36221B51E800122BFD /* FirebaseServiceFactory.swift */; };
 		85372C39221B546600122BFD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C38221B546600122BFD /* Constants.swift */; };
 		85372C3C221B586500122BFD /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C3B221B586500122BFD /* Subscriber.swift */; };
+		85372C3E221B6E8200122BFD /* MLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C3D221B6E8200122BFD /* MLNavigationController.swift */; };
+		85372C41221B6F5100122BFD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C40221B6F5100122BFD /* UIColorExtension.swift */; };
+		85372C4F221BD8CB00122BFD /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C45221BD8CB00122BFD /* OpenSans-Semibold.ttf */; };
+		85372C50221BD8CB00122BFD /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C46221BD8CB00122BFD /* OpenSans-Light.ttf */; };
+		85372C51221BD8CB00122BFD /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C47221BD8CB00122BFD /* OpenSans-Italic.ttf */; };
+		85372C52221BD8CB00122BFD /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C48221BD8CB00122BFD /* OpenSans-ExtraBold.ttf */; };
+		85372C53221BD8CB00122BFD /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C49221BD8CB00122BFD /* OpenSans-LightItalic.ttf */; };
+		85372C54221BD8CB00122BFD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C4A221BD8CB00122BFD /* OpenSans-Bold.ttf */; };
+		85372C55221BD8CB00122BFD /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C4B221BD8CB00122BFD /* OpenSans-SemiboldItalic.ttf */; };
+		85372C56221BD8CB00122BFD /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C4C221BD8CB00122BFD /* OpenSans-ExtraBoldItalic.ttf */; };
+		85372C57221BD8CB00122BFD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C4D221BD8CB00122BFD /* OpenSans-Regular.ttf */; };
+		85372C58221BD8CB00122BFD /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85372C4E221BD8CB00122BFD /* OpenSans-BoldItalic.ttf */; };
+		85372C5A221BD93600122BFD /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C59221BD93600122BFD /* Appearance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +48,19 @@
 		85372C36221B51E800122BFD /* FirebaseServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServiceFactory.swift; sourceTree = "<group>"; };
 		85372C38221B546600122BFD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		85372C3B221B586500122BFD /* Subscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
+		85372C3D221B6E8200122BFD /* MLNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLNavigationController.swift; sourceTree = "<group>"; };
+		85372C40221B6F5100122BFD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		85372C45221BD8CB00122BFD /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		85372C46221BD8CB00122BFD /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		85372C47221BD8CB00122BFD /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		85372C48221BD8CB00122BFD /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		85372C49221BD8CB00122BFD /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		85372C4A221BD8CB00122BFD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		85372C4B221BD8CB00122BFD /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		85372C4C221BD8CB00122BFD /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		85372C4D221BD8CB00122BFD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		85372C4E221BD8CB00122BFD /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		85372C59221BD93600122BFD /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,16 +105,19 @@
 		85372C19221B06DE00122BFD /* MailerLite */ = {
 			isa = PBXGroup;
 			children = (
+				85372C42221BD8A300122BFD /* Resources */,
+				85372C3F221B6F2500122BFD /* Utils */,
 				85372C3A221B585400122BFD /* Model */,
 				85372C33221B50EF00122BFD /* Services */,
 				85372C1A221B06DE00122BFD /* AppDelegate.swift */,
+				85372C3D221B6E8200122BFD /* MLNavigationController.swift */,
 				85372C1C221B06DE00122BFD /* ViewController.swift */,
 				85372C1E221B06DE00122BFD /* Main.storyboard */,
+				85372C38221B546600122BFD /* Constants.swift */,
 				85372C21221B06E100122BFD /* Assets.xcassets */,
 				85372C23221B06E100122BFD /* LaunchScreen.storyboard */,
 				85372C26221B06E100122BFD /* Info.plist */,
 				85372C2D221B125600122BFD /* GoogleService-Info.plist */,
-				85372C38221B546600122BFD /* Constants.swift */,
 			);
 			path = MailerLite;
 			sourceTree = "<group>";
@@ -108,6 +137,48 @@
 				85372C3B221B586500122BFD /* Subscriber.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		85372C3F221B6F2500122BFD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				85372C59221BD93600122BFD /* Appearance.swift */,
+				85372C40221B6F5100122BFD /* UIColorExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		85372C42221BD8A300122BFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85372C43221BD8B100122BFD /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		85372C43221BD8B100122BFD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				85372C44221BD8CB00122BFD /* Open Sans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		85372C44221BD8CB00122BFD /* Open Sans */ = {
+			isa = PBXGroup;
+			children = (
+				85372C45221BD8CB00122BFD /* OpenSans-Semibold.ttf */,
+				85372C46221BD8CB00122BFD /* OpenSans-Light.ttf */,
+				85372C47221BD8CB00122BFD /* OpenSans-Italic.ttf */,
+				85372C48221BD8CB00122BFD /* OpenSans-ExtraBold.ttf */,
+				85372C49221BD8CB00122BFD /* OpenSans-LightItalic.ttf */,
+				85372C4A221BD8CB00122BFD /* OpenSans-Bold.ttf */,
+				85372C4B221BD8CB00122BFD /* OpenSans-SemiboldItalic.ttf */,
+				85372C4C221BD8CB00122BFD /* OpenSans-ExtraBoldItalic.ttf */,
+				85372C4D221BD8CB00122BFD /* OpenSans-Regular.ttf */,
+				85372C4E221BD8CB00122BFD /* OpenSans-BoldItalic.ttf */,
+			);
+			path = "Open Sans";
 			sourceTree = "<group>";
 		};
 		CCF91D991085951363D42128 /* Pods */ = {
@@ -179,10 +250,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85372C50221BD8CB00122BFD /* OpenSans-Light.ttf in Resources */,
 				85372C25221B06E100122BFD /* LaunchScreen.storyboard in Resources */,
 				85372C2E221B125600122BFD /* GoogleService-Info.plist in Resources */,
+				85372C52221BD8CB00122BFD /* OpenSans-ExtraBold.ttf in Resources */,
 				85372C22221B06E100122BFD /* Assets.xcassets in Resources */,
 				85372C20221B06DE00122BFD /* Main.storyboard in Resources */,
+				85372C4F221BD8CB00122BFD /* OpenSans-Semibold.ttf in Resources */,
+				85372C56221BD8CB00122BFD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				85372C51221BD8CB00122BFD /* OpenSans-Italic.ttf in Resources */,
+				85372C54221BD8CB00122BFD /* OpenSans-Bold.ttf in Resources */,
+				85372C58221BD8CB00122BFD /* OpenSans-BoldItalic.ttf in Resources */,
+				85372C53221BD8CB00122BFD /* OpenSans-LightItalic.ttf in Resources */,
+				85372C57221BD8CB00122BFD /* OpenSans-Regular.ttf in Resources */,
+				85372C55221BD8CB00122BFD /* OpenSans-SemiboldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,14 +279,30 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,9 +340,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				85372C39221B546600122BFD /* Constants.swift in Sources */,
+				85372C5A221BD93600122BFD /* Appearance.swift in Sources */,
 				85372C1D221B06DE00122BFD /* ViewController.swift in Sources */,
 				85372C37221B51E800122BFD /* FirebaseServiceFactory.swift in Sources */,
+				85372C41221B6F5100122BFD /* UIColorExtension.swift in Sources */,
 				85372C3C221B586500122BFD /* Subscriber.swift in Sources */,
+				85372C3E221B6E8200122BFD /* MLNavigationController.swift in Sources */,
 				85372C35221B50FB00122BFD /* FirebaseService.swift in Sources */,
 				85372C1B221B06DE00122BFD /* AppDelegate.swift in Sources */,
 			);
