@@ -14,6 +14,8 @@ enum Result<Value, Error: Swift.Error> {
     case failure(Error)
 }
 
+// MARK: - FirebaseService
+
 class FirebaseService {
     private let firestore: Firestore
     
@@ -23,6 +25,9 @@ class FirebaseService {
     
     typealias SubscribersHandler = (Result<[Subscriber], FirestoreError>) -> Void
     
+    /// Loads all subscribers as an array of **FIRQueryDocumentSnapshots** and decodes them to array of **Subscribers**
+    ///
+    /// - Parameter handler: block to handle once the subscribers have been loaded.
     func getSubscribers(completion handler: @escaping SubscribersHandler) {
         firestore.collection(Constants.FirestoreCollections.Subscribers).getDocuments(completion: { (snapshot, error) in
             if let _ = error {
@@ -43,7 +48,7 @@ class FirebaseService {
                             handler(.failure(.unknown))
                         }
                     }
-                                        
+                    
                     handler(.success(subscribers))
                 }
                 else {
@@ -54,7 +59,13 @@ class FirebaseService {
     }
 }
 
+// MARK: - FirebaseService errors
+
 extension FirebaseService {
+    /// - responseError: returned when getting documents from Firestore fails
+    /// - invalidDocument: returned when decoding of **QuerySnapshot's document** into **Subscriber** failed
+    /// - failedToGetDocuments: returned when **QuerySnapshot's documents** are **nil**
+    /// - unknown
     enum FirestoreError: Error {
         case responseError
         case invalidDocument

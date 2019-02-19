@@ -9,10 +9,12 @@
 import Foundation
 
 struct Constants {
+    // MARK: - FirestoreCollections
     struct FirestoreCollections {
         static var Subscribers = "subscribers"
     }
     
+    // MARK: - FirestoreCollections
     struct SubscriberModelFields {
         static var Email = "email"
         static var Name = "name"

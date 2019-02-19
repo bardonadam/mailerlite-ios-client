@@ -9,10 +9,23 @@
 import Foundation
 import FirebaseFirestore
 
+/// Subscriber model
+///
+/// - id: String
+/// - email: String
+/// - name: String
+/// - state: State
+/// - created: Date
+/// - updated: Date
 struct Subscriber {
+    
+    /// Subscriber's state
+    ///
+    /// - Active
+    /// - Unsubscribed
     enum State: Int {
-        case Active
-        case Unsubscribed
+        case Active = 1
+        case Unsubscribed = 0
     }
     
     let id: String
@@ -22,6 +35,10 @@ struct Subscriber {
     let created: Date
     let updated: Date
     
+    /// Initializes Subscriber from FIRQueryDocumentSnapshot
+    ///
+    /// - Parameter documentSnapshot
+    /// - Throws: FirebaseService.FirestoreError.invalidDocument
     init(documentSnapshot: QueryDocumentSnapshot) throws {
         guard let email = documentSnapshot.get(Constants.SubscriberModelFields.Email) as? String,
               let name = documentSnapshot.get(Constants.SubscriberModelFields.Name) as? String,

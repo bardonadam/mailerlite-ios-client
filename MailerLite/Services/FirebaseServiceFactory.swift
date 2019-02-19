@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseFirestore
 
+/// Factory to create and initialize **FirebaseService**
 class FirebaseServiceFactory {
     private let firestore: Firestore
     
@@ -20,6 +21,7 @@ class FirebaseServiceFactory {
         self.firestore.settings = settings
     }
     
+    /// - Returns: Initialized FirebaseService
     func makeFirebaseService() -> FirebaseService {
         return FirebaseService(firestore: firestore)
     }
