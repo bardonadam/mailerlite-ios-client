@@ -38,6 +38,9 @@ extension UIColor {
 
 extension UIColor {
     static var Bunker = UIColor(hex: "292C31")
-    static var WhiteSmoke = UIColor(hex: "F6F6F6")
     static var Shadow = UIColor(hex: "C9D7E9")
+    static var LightGray = UIColor(hex: "EEEEEE")
+    static var Platinum = UIColor(hex: "E3E3E3")
+    static var ShamrockGreen = UIColor(hex: "19A159")
+    static var Blue = UIColor(hex: "1878FA")
 }
