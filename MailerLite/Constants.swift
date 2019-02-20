@@ -10,11 +10,13 @@ import UIKit
 
 struct Constants {
     // MARK: - FirestoreCollections
+    
     struct FirestoreCollections {
         static var Subscribers = "subscribers"
     }
     
-    // MARK: - FirestoreCollections
+    // MARK: - SubscriberModelFields
+    
     struct SubscriberModelFields {
         static var Email = "email"
         static var Name = "name"
@@ -22,6 +24,8 @@ struct Constants {
         static var Created = "created"
         static var Updated = "updated"
     }
+    
+    // MARK: - Layout
     
     struct Layout {
         struct SubscriberList {
@@ -35,9 +39,16 @@ struct Constants {
         }
     }
     
+    // MARK: - Strings
+    
     struct Strings {
         struct SubscriberList {
             static var Added = "Added: "
+        }
+        
+        struct SubscriberDetail {
+            static var CreatedAt = "Created at:"
+            static var UpdatedAt = "Updated at:"
         }
         
         struct StateView {

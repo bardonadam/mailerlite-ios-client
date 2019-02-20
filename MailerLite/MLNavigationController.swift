@@ -26,6 +26,8 @@ class MLNavigationController: UINavigationController {
         navigationBar.layer.shadowOpacity = 1
         navigationBar.layer.shadowOffset = CGSize(width: 0, height: 3.0)
         navigationBar.layer.shadowRadius = 3
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: Appearance.openSansBoldFont(17)], for: UIControl.State.normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

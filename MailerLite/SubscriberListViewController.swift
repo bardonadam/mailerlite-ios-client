@@ -77,7 +77,7 @@ class SubscriberListViewController: UIViewController {
         firebaseService.getSubscribers(completion: { [weak self] result in
             switch result {
             case .success(let subscribers):
-                self?.subscribers = subscribers
+                self?.subscribers = subscribers.sorted(by: { $0.created > $1.created})
                 self?.adapter.performUpdates(animated: true)
                 
                 if let handler = handler {
@@ -105,7 +105,14 @@ class SubscriberListViewController: UIViewController {
 // MARK: - SubscriberListSectionDelegate
 
 extension SubscriberListViewController: SubscriberListSectionDelegate {
-    func didSelectedSubscriber(_ subscriber: SubscriberListItem) {
+    func didSelectedSubscriber(_ subscriberListItem: SubscriberListItem) {
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let nextController = mainStoryboard.instantiateViewController(withIdentifier: "SubscriberDetailViewController") as? SubscriberDetailViewController else {
+                    return
+                }
+        
+                nextController.subscriber = subscriberListItem.subscriber
+                self.navigationController?.pushViewController(nextController, animated: true)
     }
 }
 

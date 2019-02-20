@@ -32,7 +32,7 @@ class SubscriberListSectionController: ListSectionController {
         
         if let cell = cell as? SubscriberListItemCell, let subscriberListItem = subscriberListItem {
             cell.nameLabel.text = subscriberListItem.subscriber.name
-            cell.stateView.setup(content: subscriberListItem.subscriber.state)
+            cell.stateView.setup(withState: subscriberListItem.subscriber.state)
             cell.addedLabel.text = Constants.Strings.SubscriberList.Added + subscriberListItem.subscriber.getFormattedDate(dateType: .Created)
             cell.emailLabel.text = subscriberListItem.subscriber.email
         }

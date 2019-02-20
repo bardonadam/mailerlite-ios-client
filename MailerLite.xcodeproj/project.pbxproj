@@ -40,6 +40,7 @@
 		85372C6B221DB64900122BFD /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C6A221DB64900122BFD /* StateView.swift */; };
 		85372C6D221DB66C00122BFD /* StateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85372C6C221DB66C00122BFD /* StateView.xib */; };
 		85372C6F221DB89000122BFD /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C6E221DB89000122BFD /* UIViewExtension.swift */; };
+		855F5FE4221DC9AD004228DC /* SubscriberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		85372C6A221DB64900122BFD /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		85372C6C221DB66C00122BFD /* StateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateView.xib; sourceTree = "<group>"; };
 		85372C6E221DB89000122BFD /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberDetailViewController.swift; sourceTree = "<group>"; };
 		B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				85372C23221B06E100122BFD /* LaunchScreen.storyboard */,
 				85372C26221B06E100122BFD /* Info.plist */,
 				85372C2D221B125600122BFD /* GoogleService-Info.plist */,
+				855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */,
 			);
 			path = MailerLite;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				85372C6B221DB64900122BFD /* StateView.swift in Sources */,
 				85372C35221B50FB00122BFD /* FirebaseService.swift in Sources */,
 				85372C1B221B06DE00122BFD /* AppDelegate.swift in Sources */,
+				855F5FE4221DC9AD004228DC /* SubscriberDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

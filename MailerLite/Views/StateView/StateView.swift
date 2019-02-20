@@ -34,10 +34,20 @@ class StateView: UIView {
         contentView.layer.cornerRadius = 6
     }
     
-    func setup(content: Subscriber.State) {
-        switch content {
+    /// Sets the StateView based on the subscriber's state
+    ///
+    /// - Parameters:
+    ///   - state: subscriber's state
+    ///   - centered: flag if the view should be centered, **false** by default
+    func setup(withState state: Subscriber.State, centered: Bool = false) {
+        switch state {
         case .Active:
             contentView.frame.size.width = Constants.Layout.StateView.Active
+            
+            if centered {
+                contentView.frame.origin.x = contentView.frame.size.width / 2
+            }
+            
             contentView.backgroundColor = .OffGreen
             label.textColor = .Salem
             label.text = Constants.Strings.StateView.Active
