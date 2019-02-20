@@ -43,4 +43,11 @@ extension UIColor {
     static var Platinum = UIColor(hex: "E3E3E3")
     static var ShamrockGreen = UIColor(hex: "19A159")
     static var Blue = UIColor(hex: "1878FA")
+    static var Steel = UIColor(hex: "666666")
+    static var MineShaft = UIColor(hex: "333333")
+    static var Onyx = UIColor(hex: "111111")
+    static var OffGreen = UIColor(hex: "E3F7F0")
+    static var Salem = UIColor(hex: "17924B")
+    static var EggSour = UIColor(hex: "FFF3DE")
+    static var PottersClay = UIColor(hex: "805841")
 }

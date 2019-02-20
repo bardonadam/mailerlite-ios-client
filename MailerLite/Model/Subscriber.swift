@@ -28,6 +28,15 @@ struct Subscriber {
         case Unsubscribed = 0
     }
     
+    /// Used as a parameter to get formatted date
+    ///
+    /// - Created
+    /// - Updated
+    enum DateType {
+        case Created
+        case Updated
+    }
+    
     let id: String
     let email: String
     let name: String
@@ -56,5 +65,24 @@ struct Subscriber {
         self.state = state
         self.created = created.dateValue()
         self.updated = updated.dateValue()
+    }
+    
+    /// Returns formatted date based on date type
+    ///
+    /// - Parameter dateType: Created or Updated
+    /// - Returns: formatted date, e.g. "Mon 12:43"
+    func getFormattedDate(dateType: DateType) -> String {
+        if created.isToday {
+            return "Today, \(created.time)"
+        }
+        else if created.isInSameWeek() {
+            return created.dayAndTime
+        }
+        else if created.isInSameYear() {
+            return created.monthAndDayAndTime
+        }
+        else {
+            return created.yearAndMonthAndDayAndTime
+        }
     }
 }

@@ -9,34 +9,87 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubscriberListItemCell" customModule="MailerLite" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="521" height="157"/>
+            <rect key="frame" x="0.0" y="0.0" width="521" height="132"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="521" height="157"/>
+                <rect key="frame" x="0.0" y="0.0" width="521" height="132"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-qN-8eG" userLabel="Content View">
-                        <rect key="frame" x="0.0" y="0.0" width="521" height="157"/>
+                        <rect key="frame" x="0.0" y="0.0" width="521" height="132"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0q-hZ-alp">
-                                <rect key="frame" x="12" y="0.0" width="497" height="145"/>
+                                <rect key="frame" x="12" y="0.0" width="497" height="120"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="gwm-TC-Hvn">
+                                        <rect key="frame" x="12" y="12" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="f16-mg-mb7"/>
+                                            <constraint firstAttribute="width" secondItem="gwm-TC-Hvn" secondAttribute="height" multiplier="1:1" id="j9X-Q1-J1e"/>
+                                        </constraints>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-uJ-wUJ">
-                                        <rect key="frame" x="0.0" y="143" width="497" height="2"/>
+                                        <rect key="frame" x="0.0" y="118" width="497" height="2"/>
                                         <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="fUu-Yc-Qv3"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D7-QS-fDd">
+                                        <rect key="frame" x="84" y="36" width="400" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Added:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3R-C8-ETN">
+                                        <rect key="frame" x="84" y="55.5" width="401" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-VW-jz0">
+                                        <rect key="frame" x="12" y="84" width="473" height="19"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                                        <color key="textColor" red="0.098039215686274508" green="0.63137254901960782" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgY-2P-tzS" customClass="StateView" customModule="MailerLite" customModuleProvider="target">
+                                        <rect key="frame" x="84" y="12" width="114" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="pew-L8-Ae5"/>
+                                            <constraint firstAttribute="width" constant="114" id="wCX-Ya-d5L"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="dFd-uJ-wUJ" secondAttribute="bottom" id="1lk-80-SDm"/>
+                                    <constraint firstItem="tgf-VW-jz0" firstAttribute="leading" secondItem="gwm-TC-Hvn" secondAttribute="leading" id="JHc-4k-BBL"/>
+                                    <constraint firstItem="h3R-C8-ETN" firstAttribute="top" secondItem="3D7-QS-fDd" secondAttribute="bottom" constant="2" id="QLe-mX-s6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="3D7-QS-fDd" secondAttribute="trailing" constant="13" id="Rxe-Gh-dqK"/>
+                                    <constraint firstAttribute="trailing" secondItem="h3R-C8-ETN" secondAttribute="trailing" constant="12" id="SYL-L7-3Y7"/>
+                                    <constraint firstItem="wgY-2P-tzS" firstAttribute="top" secondItem="f0q-hZ-alp" secondAttribute="top" constant="12" id="aSh-du-2Fo"/>
+                                    <constraint firstItem="3D7-QS-fDd" firstAttribute="top" secondItem="wgY-2P-tzS" secondAttribute="bottom" constant="4" id="eHl-Ka-bNy"/>
                                     <constraint firstAttribute="trailing" secondItem="dFd-uJ-wUJ" secondAttribute="trailing" id="fDK-In-6Id"/>
+                                    <constraint firstAttribute="trailing" secondItem="tgf-VW-jz0" secondAttribute="trailing" constant="12" id="gnX-2b-4KP"/>
+                                    <constraint firstItem="h3R-C8-ETN" firstAttribute="leading" secondItem="3D7-QS-fDd" secondAttribute="leading" id="gzK-fK-gh8"/>
+                                    <constraint firstItem="tgf-VW-jz0" firstAttribute="top" secondItem="gwm-TC-Hvn" secondAttribute="bottom" constant="12" id="jlf-wO-4ld"/>
+                                    <constraint firstItem="gwm-TC-Hvn" firstAttribute="top" secondItem="f0q-hZ-alp" secondAttribute="top" constant="12" id="lZI-bc-nxr"/>
+                                    <constraint firstItem="wgY-2P-tzS" firstAttribute="leading" secondItem="gwm-TC-Hvn" secondAttribute="trailing" constant="12" id="puW-2A-rsJ"/>
+                                    <constraint firstItem="gwm-TC-Hvn" firstAttribute="leading" secondItem="f0q-hZ-alp" secondAttribute="leading" constant="12" id="qyc-rq-Dhu"/>
+                                    <constraint firstItem="3D7-QS-fDd" firstAttribute="leading" secondItem="wgY-2P-tzS" secondAttribute="leading" id="zRT-3h-6i2"/>
                                     <constraint firstItem="dFd-uJ-wUJ" firstAttribute="leading" secondItem="f0q-hZ-alp" secondAttribute="leading" id="zUO-kE-bkE"/>
                                 </constraints>
                             </view>
@@ -58,13 +111,21 @@
                 <constraint firstItem="tfM-qN-8eG" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="g1Z-et-TxX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="521" height="157"/>
+            <size key="customSize" width="521" height="135"/>
             <connections>
+                <outlet property="addedLabel" destination="h3R-C8-ETN" id="ZXQ-cK-VZQ"/>
+                <outlet property="avatarImageView" destination="gwm-TC-Hvn" id="QtY-yS-V2X"/>
                 <outlet property="background" destination="tfM-qN-8eG" id="Ncs-4u-ap1"/>
                 <outlet property="bottomBorderView" destination="dFd-uJ-wUJ" id="u7S-aU-buF"/>
                 <outlet property="containerView" destination="f0q-hZ-alp" id="G2D-ba-CmW"/>
+                <outlet property="emailLabel" destination="tgf-VW-jz0" id="MB9-Sr-XdM"/>
+                <outlet property="nameLabel" destination="3D7-QS-fDd" id="41d-j8-OE8"/>
+                <outlet property="stateView" destination="wgY-2P-tzS" id="3pB-OL-AAq"/>
             </connections>
-            <point key="canvasLocation" x="24.800000000000001" y="142.57871064467767"/>
+            <point key="canvasLocation" x="24.800000000000001" y="132.23388305847078"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Avatar" width="120" height="120"/>
+    </resources>
 </document>

@@ -36,6 +36,10 @@
 		85372C63221C88D100122BFD /* SubscriberListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C61221C88D100122BFD /* SubscriberListItemCell.swift */; };
 		85372C64221C88D100122BFD /* SubscriberListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85372C62221C88D100122BFD /* SubscriberListItemCell.xib */; };
 		85372C66221CAAA300122BFD /* SubscriberListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C65221CAAA300122BFD /* SubscriberListDataSource.swift */; };
+		85372C68221D29C000122BFD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C67221D29C000122BFD /* DateExtension.swift */; };
+		85372C6B221DB64900122BFD /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C6A221DB64900122BFD /* StateView.swift */; };
+		85372C6D221DB66C00122BFD /* StateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85372C6C221DB66C00122BFD /* StateView.xib */; };
+		85372C6F221DB89000122BFD /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C6E221DB89000122BFD /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,10 @@
 		85372C61221C88D100122BFD /* SubscriberListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberListItemCell.swift; sourceTree = "<group>"; };
 		85372C62221C88D100122BFD /* SubscriberListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriberListItemCell.xib; sourceTree = "<group>"; };
 		85372C65221CAAA300122BFD /* SubscriberListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberListDataSource.swift; sourceTree = "<group>"; };
+		85372C67221D29C000122BFD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		85372C6A221DB64900122BFD /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		85372C6C221DB66C00122BFD /* StateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateView.xib; sourceTree = "<group>"; };
+		85372C6E221DB89000122BFD /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +166,8 @@
 			children = (
 				85372C59221BD93600122BFD /* Appearance.swift */,
 				85372C40221B6F5100122BFD /* UIColorExtension.swift */,
+				85372C67221D29C000122BFD /* DateExtension.swift */,
+				85372C6E221DB89000122BFD /* UIViewExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -198,6 +208,7 @@
 		85372C5F221C882C00122BFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				85372C69221DB63600122BFD /* StateView */,
 				85372C60221C887600122BFD /* SubscriberListItemCell */,
 			);
 			path = Views;
@@ -210,6 +221,15 @@
 				85372C62221C88D100122BFD /* SubscriberListItemCell.xib */,
 			);
 			path = SubscriberListItemCell;
+			sourceTree = "<group>";
+		};
+		85372C69221DB63600122BFD /* StateView */ = {
+			isa = PBXGroup;
+			children = (
+				85372C6A221DB64900122BFD /* StateView.swift */,
+				85372C6C221DB66C00122BFD /* StateView.xib */,
+			);
+			path = StateView;
 			sourceTree = "<group>";
 		};
 		CCF91D991085951363D42128 /* Pods */ = {
@@ -291,6 +311,7 @@
 				85372C4F221BD8CB00122BFD /* OpenSans-Semibold.ttf in Resources */,
 				85372C56221BD8CB00122BFD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				85372C51221BD8CB00122BFD /* OpenSans-Italic.ttf in Resources */,
+				85372C6D221DB66C00122BFD /* StateView.xib in Resources */,
 				85372C54221BD8CB00122BFD /* OpenSans-Bold.ttf in Resources */,
 				85372C58221BD8CB00122BFD /* OpenSans-BoldItalic.ttf in Resources */,
 				85372C53221BD8CB00122BFD /* OpenSans-LightItalic.ttf in Resources */,
@@ -372,16 +393,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				85372C5C221C7C8F00122BFD /* SubscriberListItem.swift in Sources */,
+				85372C68221D29C000122BFD /* DateExtension.swift in Sources */,
 				85372C39221B546600122BFD /* Constants.swift in Sources */,
 				85372C5A221BD93600122BFD /* Appearance.swift in Sources */,
 				85372C1D221B06DE00122BFD /* SubscriberListViewController.swift in Sources */,
 				85372C37221B51E800122BFD /* FirebaseServiceFactory.swift in Sources */,
+				85372C6F221DB89000122BFD /* UIViewExtension.swift in Sources */,
 				85372C66221CAAA300122BFD /* SubscriberListDataSource.swift in Sources */,
 				85372C41221B6F5100122BFD /* UIColorExtension.swift in Sources */,
 				85372C63221C88D100122BFD /* SubscriberListItemCell.swift in Sources */,
 				85372C3C221B586500122BFD /* Subscriber.swift in Sources */,
 				85372C3E221B6E8200122BFD /* MLNavigationController.swift in Sources */,
 				85372C5E221C819000122BFD /* SubscriberListSectionController.swift in Sources */,
+				85372C6B221DB64900122BFD /* StateView.swift in Sources */,
 				85372C35221B50FB00122BFD /* FirebaseService.swift in Sources */,
 				85372C1B221B06DE00122BFD /* AppDelegate.swift in Sources */,
 			);

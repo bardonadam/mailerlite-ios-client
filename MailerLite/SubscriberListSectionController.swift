@@ -31,7 +31,10 @@ class SubscriberListSectionController: ListSectionController {
         let cell = collectionContext!.dequeueReusableCell(withNibName: "SubscriberListItemCell", bundle: nil, for: self, at: index)
         
         if let cell = cell as? SubscriberListItemCell, let subscriberListItem = subscriberListItem {
-          
+            cell.nameLabel.text = subscriberListItem.subscriber.name
+            cell.stateView.setup(content: subscriberListItem.subscriber.state)
+            cell.addedLabel.text = Constants.Strings.SubscriberList.Added + subscriberListItem.subscriber.getFormattedDate(dateType: .Created)
+            cell.emailLabel.text = subscriberListItem.subscriber.email
         }
         
         return cell

@@ -26,7 +26,23 @@ struct Constants {
     struct Layout {
         struct SubscriberList {
             static var CollectionTopOffset: CGFloat = 12
-            static var ItemHeight: CGFloat = 120
+            static var ItemHeight: CGFloat = 132
+        }
+        
+        struct StateView {
+            static var Active: CGFloat = 60
+            static var Unsubscribed: CGFloat = 114
+        }
+    }
+    
+    struct Strings {
+        struct SubscriberList {
+            static var Added = "Added: "
+        }
+        
+        struct StateView {
+            static var Active = "Active"
+            static var Unsubscribed = "Unsubscribed"
         }
     }
 }
