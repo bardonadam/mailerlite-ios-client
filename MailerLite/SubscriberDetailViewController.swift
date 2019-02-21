@@ -68,7 +68,7 @@ class SubscriberDetailViewController: UIViewController {
         deleteSubscriberButton.backgroundColor = .CarminePink
         deleteSubscriberButton.setTitle(Constants.Strings.SubscriberDetail.DeleteButtonTitle, for: .normal)
         deleteSubscriberButton.layer.masksToBounds = true
-        deleteSubscriberButton.layer.cornerRadius = 6
+        deleteSubscriberButton.layer.cornerRadius = Constants.UI.CornerRadius
         
     }
     

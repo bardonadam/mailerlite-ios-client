@@ -31,7 +31,7 @@ class StateView: UIView {
         addSubview(contentView)
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         contentView.frame = self.bounds        
-        contentView.layer.cornerRadius = 6
+        contentView.layer.cornerRadius = Constants.UI.CornerRadius
     }
     
     /// Sets the StateView based on the subscriber's state
@@ -42,7 +42,7 @@ class StateView: UIView {
     func setup(withState state: Subscriber.State, centered: Bool = false) {
         switch state {
         case .Active:
-            contentView.frame.size.width = Constants.Layout.StateView.Active
+            contentView.frame.size.width = Constants.UI.StateView.Active
             
             if centered {
                 contentView.frame.origin.x = contentView.frame.size.width / 2
@@ -52,7 +52,7 @@ class StateView: UIView {
             label.textColor = .Salem
             label.text = Constants.Strings.State.Active
         case .Unsubscribed:
-            contentView.frame.size.width = Constants.Layout.StateView.Unsubscribed            
+            contentView.frame.size.width = Constants.UI.StateView.Unsubscribed            
             contentView.frame.origin.x = 0
             contentView.backgroundColor = .EggSour
             label.textColor = .PottersClay

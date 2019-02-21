@@ -22,7 +22,7 @@ class SubscriberListViewController: UIViewController {
     let collectionView: UICollectionView = {
         let view = UICollectionView(frame: CGRect.zero, collectionViewLayout: ListCollectionViewLayout(stickyHeaders: true, topContentInset: 0, stretchToEdge: false))
         view.backgroundColor = .LightGray
-        view.contentInset.top = Constants.Layout.SubscriberList.CollectionTopOffset
+        view.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset
         return view
     }()
     
@@ -60,7 +60,7 @@ class SubscriberListViewController: UIViewController {
             // If we are showing a navigation bar we need to change the y offset for the sticky headers as normal behaviour
             // of the UICollectionView to keep scrolling under the navigation bar. This case the sticky headers to end up below
             // this bar too hence this bit of calculation to determine what the correct y offset is
-            flowLayout.stickyHeaderYOffset = self.view.safeAreaLayoutGuide.layoutFrame.size.height + Constants.Layout.SubscriberList.CollectionTopOffset
+            flowLayout.stickyHeaderYOffset = self.view.safeAreaLayoutGuide.layoutFrame.size.height + Constants.UI.SubscriberList.CollectionTopOffset
             collectionView.collectionViewLayout = flowLayout
         }
         
@@ -114,10 +114,10 @@ class SubscriberListViewController: UIViewController {
     }
     
     @objc func pullToRefresh() {
-        collectionView.contentInset.top = Constants.Layout.SubscriberList.CollectionTopOffset + 70
+        collectionView.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset + 70
         loadSubscribers(completion: {
             self.collectionView.refreshControl?.endRefreshing()
-            self.collectionView.contentInset.top = Constants.Layout.SubscriberList.CollectionTopOffset
+            self.collectionView.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset
         })
     }
 }

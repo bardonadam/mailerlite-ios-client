@@ -24,7 +24,7 @@ class SubscriberListSectionController: ListSectionController {
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: Constants.Layout.SubscriberList.ItemHeight)
+        return CGSize(width: UIScreen.main.bounds.width, height: Constants.UI.SubscriberList.ItemHeight)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {

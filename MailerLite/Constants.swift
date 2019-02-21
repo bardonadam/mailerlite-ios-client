@@ -27,7 +27,7 @@ struct Constants {
     
     // MARK: - Layout
     
-    struct Layout {
+    struct UI {
         struct SubscriberList {
             static var CollectionTopOffset: CGFloat = 12
             static var ItemHeight: CGFloat = 132
@@ -37,6 +37,8 @@ struct Constants {
             static var Active: CGFloat = 60
             static var Unsubscribed: CGFloat = 114
         }
+        
+        static var CornerRadius: CGFloat = 6
     }
     
     // MARK: - Strings

@@ -24,7 +24,7 @@ class SubscriberListItemCell: UICollectionViewCell {
         
         background.backgroundColor = .LightGray
         
-        containerView.layer.cornerRadius = 6
+        containerView.layer.cornerRadius = Constants.UI.CornerRadius
         containerView.clipsToBounds = true
         
         avatarImageView.layer.masksToBounds = true
