@@ -23,6 +23,7 @@ enum FilterState: String {
 class FilterToolbarView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var subscribersCountLabel: UILabel!
     
     var filterState = FilterState.All
     var delegate: FilterToolbarProtocol?
@@ -52,6 +53,8 @@ class FilterToolbarView: UIView {
         filterButton.layer.cornerRadius = Constants.UI.CornerRadius
         filterButton.titleEdgeInsets.left = 10
         filterButton.titleEdgeInsets.right = 10
+        
+        subscribersCountLabel.text = "0 \(Constants.Strings.Filter.Subscribers)"
     }
     
     func update() {
@@ -84,5 +87,12 @@ extension FilterToolbarView: ABActionSheetDelegate {
         filterState = FilterState.allValues[index]
         update()
         delegate?.didChangeFilter(filterState: filterState)
+    }
+}
+
+extension FilterToolbarView: SubscribersCountDelegate {
+    func didChangeSubscribersCount(_ count: Int) {
+        let subscribersString = count > 1 ? Constants.Strings.Filter.Subscribers : Constants.Strings.Filter.Subscriber
+        subscribersCountLabel.text = "\(count) \(subscribersString)"
     }
 }

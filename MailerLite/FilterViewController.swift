@@ -41,6 +41,7 @@ class FilterViewController: UIViewController {
         
         if let parent = parent as? SubscriberListViewController {
             filterToolbarView.delegate = parent
+            parent.delegate = filterToolbarView
         }
     }
     

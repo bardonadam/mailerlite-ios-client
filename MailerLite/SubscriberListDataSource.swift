@@ -9,6 +9,10 @@
 import UIKit
 import IGListKit
 
+protocol SubscribersCountDelegate {
+    func didChangeSubscribersCount(_ count: Int)
+}
+
 extension SubscriberListViewController: ListAdapterDataSource {
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var listItems = [ListDiffable]()
@@ -26,8 +30,9 @@ extension SubscriberListViewController: ListAdapterDataSource {
                     listItems.append(SubscriberListItem(subscriber: subscriber))
                 }
             }
-//            listItems.append(SubscriberListItem(subscriber: subscriber))
         }
+        
+        delegate?.didChangeSubscribersCount(listItems.count)
         
         return listItems
     }

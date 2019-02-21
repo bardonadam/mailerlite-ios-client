@@ -66,7 +66,9 @@ struct Constants {
         }
         
         struct Filter {
-            static var Title = "Show Subscribers:"
+            static var Subscriber = "Subscriber"
+            static var Subscribers = "Subscribers"
+            static var Title = "Show \(Subscribers):"
         }
     }
 }

@@ -33,7 +33,8 @@ class SubscriberListViewController: UIViewController {
     lazy var filterViewController = FilterViewController()
     
     var subscribers = [Subscriber]()
-    var filterState: FilterState = .All
+    var filterState: FilterState = .All    
+    var delegate: SubscribersCountDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
