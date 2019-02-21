@@ -22,11 +22,6 @@ class MLNavigationController: UINavigationController {
                                              NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationBar.layer.masksToBounds = false
         
-        navigationBar.layer.shadowColor = UIColor.Shadow.cgColor
-        navigationBar.layer.shadowOpacity = 1
-        navigationBar.layer.shadowOffset = CGSize(width: 0, height: 3.0)
-        navigationBar.layer.shadowRadius = 3
-        
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: Appearance.openSansBoldFont(17)], for: UIControl.State.normal)
     }
     
