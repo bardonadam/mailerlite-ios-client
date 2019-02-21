@@ -13,15 +13,10 @@ import IGListKit
 class SubscriberListViewController: UIViewController {
     private var firebaseServiceFactory: FirebaseServiceFactory?
     private lazy var firebaseService: FirebaseService = {
-        if let firebaseServiceFactory = firebaseServiceFactory {
-            return firebaseServiceFactory.makeFirebaseService()
-        }
-        else {
-            let firebaseServiceFactory = FirebaseServiceFactory()
-            self.firebaseServiceFactory = firebaseServiceFactory
-            
-            return firebaseServiceFactory.makeFirebaseService()
-        }
+        let firebaseServiceFactory = FirebaseServiceFactory()
+        self.firebaseServiceFactory = firebaseServiceFactory
+        
+        return firebaseServiceFactory.makeFirebaseService()
     }()
     
     let collectionView: UICollectionView = {
@@ -56,8 +51,6 @@ class SubscriberListViewController: UIViewController {
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         adapter.dataSource = self
-        
-        loadSubscribers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,6 +63,8 @@ class SubscriberListViewController: UIViewController {
             flowLayout.stickyHeaderYOffset = self.view.safeAreaLayoutGuide.layoutFrame.size.height + Constants.Layout.SubscriberList.CollectionTopOffset
             collectionView.collectionViewLayout = flowLayout
         }
+        
+        loadSubscribers()
     }
     
     override func viewDidLayoutSubviews() {
@@ -107,6 +102,17 @@ class SubscriberListViewController: UIViewController {
         })
     }
     
+    func addSubscriber(subscriber: Subscriber) {
+        firebaseService.addSubscriber(subscriber, completion: { [weak self] result in
+            switch result {
+            case .success:
+                self?.loadSubscribers()
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
+    
     @objc func pullToRefresh() {
         collectionView.contentInset.top = Constants.Layout.SubscriberList.CollectionTopOffset + 70
         loadSubscribers(completion: {
@@ -134,9 +140,7 @@ extension SubscriberListViewController: SubscriberListSectionDelegate {
 
 extension SubscriberListViewController: SubscriberFormDelegate {
     func didSubmitForm(subscriber: Subscriber) {
-        subscribers.append(subscriber)
-        subscribers.sort(by: { $0.created > $1.created})
-        adapter.performUpdates(animated: true)
+        addSubscriber(subscriber: subscriber)
     }
 }
 

@@ -44,6 +44,14 @@ struct Subscriber {
     let created: Date
     let updated: Date
     
+    var asDictionary: [String: Any] {
+        return ["email": email,
+                "name": name,
+                "state": state.rawValue,
+                "created": created,
+                "updated": updated]
+    }
+    
     /// Initializes Subscriber from FIRQueryDocumentSnapshot
     ///
     /// - Parameter documentSnapshot
@@ -68,8 +76,8 @@ struct Subscriber {
     }
     
     /// Initializes Subscriber from its properties
-    init(email: String, name: String, state: State, created: Date?, updated: Date?) {
-        self.id = "QueryDocumentSnapshot.id"
+    init(id: String, email: String, name: String, state: State, created: Date?, updated: Date?) {
+        self.id = id
         self.email = email
         self.name = name
         self.state = state

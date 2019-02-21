@@ -24,6 +24,7 @@ class FirebaseService {
     }
     
     typealias SubscribersHandler = (Result<[Subscriber], FirestoreError>) -> Void
+    typealias SetSubscriberHandler = (Result<String?, FirestoreError>) -> Void
     
     /// Loads all subscribers as an array of **FIRQueryDocumentSnapshots** and decodes them to array of **Subscribers**
     ///
@@ -36,6 +37,7 @@ class FirebaseService {
             else {
                 if let documents = snapshot?.documents {
                     var subscribers: [Subscriber] = []
+                    
                     for document in documents {
                         do {
                             let subscriber = try Subscriber(documentSnapshot: document)
@@ -45,7 +47,7 @@ class FirebaseService {
                             handler(.failure(error))
                         }
                         catch {
-                            handler(.failure(.unknown))
+                            handler(.failure(.other(error)))
                         }
                     }
                     
@@ -57,6 +59,59 @@ class FirebaseService {
             }
         })
     }
+    
+    /// Adds new **Subscriber** and returns its id in completion handler
+    ///
+    /// - Parameters:
+    ///   - subscriber
+    ///   - handler: block to handle once the subscriber has been added.
+    func addSubscriber(_ subscriber: Subscriber, completion handler: @escaping SetSubscriberHandler) {
+        var ref: DocumentReference? = nil
+        ref = firestore.collection(Constants.FirestoreCollections.Subscribers).addDocument(data: subscriber.asDictionary, completion: { error in
+            if let error = error {
+                handler(.failure(.other(error)))
+            }
+            else if let ref = ref {
+                handler(.success(ref.documentID))
+            }
+            else {
+                handler(.failure(.noDocumentId))
+            }
+        })
+    }
+    
+    /// - Parameters:
+    ///   - subscriber
+    ///   - handler: block to handle once the subscriber has been updated
+    func updateSubscriber(_ subscriber: Subscriber, completion handler: @escaping SetSubscriberHandler) {
+        let subscriberRef = firestore.collection(Constants.FirestoreCollections.Subscribers).document(subscriber.id)
+        
+        subscriberRef.updateData([
+            "email": subscriber.email,
+            "name": subscriber.name,
+            "state": subscriber.state.rawValue,
+            "updated": Date()
+        ]) { error in
+            if let error = error {
+                handler(.failure(.other(error)))
+            } else {
+                handler(.success(nil))
+            }
+        }
+    }
+    
+    /// - Parameters:
+    ///   - subscriber
+    ///   - handler: block to handle once the subscriber has been deleted
+    func deleteSubscriber(_ subscriber: Subscriber, completion handler: @escaping SetSubscriberHandler) {
+        firestore.collection(Constants.FirestoreCollections.Subscribers).document(subscriber.id).delete() { error in
+            if let error = error {
+                handler(.failure(.other(error)))
+            } else {
+                handler(.success(nil))
+            }
+        }
+    }
 }
 
 // MARK: - FirebaseService errors
@@ -65,11 +120,13 @@ extension FirebaseService {
     /// - responseError: returned when getting documents from Firestore fails
     /// - invalidDocument: returned when decoding of **QuerySnapshot's document** into **Subscriber** failed
     /// - failedToGetDocuments: returned when **QuerySnapshot's documents** are **nil**
-    /// - unknown
+    /// - noDocumentId: returned when adding new subscriber to Firestore doesn't return its id
+    /// - other: any other **Error**
     enum FirestoreError: Error {
         case responseError
         case invalidDocument
         case failedToGetDocuments
-        case unknown
+        case noDocumentId
+        case other(Error)
     }
 }

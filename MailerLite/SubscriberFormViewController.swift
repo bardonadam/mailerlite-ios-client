@@ -96,21 +96,25 @@ class SubscriberFormViewController: FormViewController {
         }
         
         var state: Subscriber.State
+        var id: String
         var created: Date?
         var updated: Date?
         
         if formType == .UpdateSubscriber {
-            guard let unwrappedState = form.allRows[2].baseValue as? Subscriber.State else {
+            guard let unwrappedState = form.allRows[2].baseValue as? Subscriber.State, let subscriberId = subscriber?.id else {
                 return nil
             }
+            
+            id = subscriberId
             state = unwrappedState
             created = subscriber?.created
             updated = Date()
         }
         else {
+            id = "" // When adding new subscriber, proper id is returned from Firestore
             state = .Active
         }
         
-        return Subscriber(email: email, name: name, state: state, created: created, updated: updated)
+        return Subscriber(id: id, email: email, name: name, state: state, created: created, updated: updated)
     }
 }

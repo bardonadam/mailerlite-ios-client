@@ -17,8 +17,26 @@ class SubscriberDetailViewController: UIViewController {
     @IBOutlet weak var createdAtValueLabel: UILabel!
     @IBOutlet weak var updatedAtTitleLabel: UILabel!
     @IBOutlet weak var updatedAtValueLabel: UILabel!
+    @IBOutlet weak var deleteSubscriberButton: UIButton!
+    
+    private var firebaseServiceFactory: FirebaseServiceFactory?
+    private lazy var firebaseService: FirebaseService = {
+        let firebaseServiceFactory = FirebaseServiceFactory()
+        self.firebaseServiceFactory = firebaseServiceFactory
+        
+        return firebaseServiceFactory.makeFirebaseService()
+    }()
     
     var subscriber: Subscriber?
+    
+    init(firebaseServiceFactory: FirebaseServiceFactory) {
+        self.firebaseServiceFactory = firebaseServiceFactory
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +65,14 @@ class SubscriberDetailViewController: UIViewController {
         updatedAtTitleLabel.text = Constants.Strings.SubscriberDetail.UpdatedAt
         updatedAtValueLabel.text = subscriber?.updated.yearAndMonthAndDayAndTime
         
+        deleteSubscriberButton.backgroundColor = .CarminePink
+        deleteSubscriberButton.setTitle(Constants.Strings.SubscriberDetail.DeleteButtonTitle, for: .normal)
+        deleteSubscriberButton.layer.masksToBounds = true
+        deleteSubscriberButton.layer.cornerRadius = 6
+        
     }
+    
+    // MARK: - UI items actions
     
     @objc func editBarButtonAction() {
         let subscriberFormViewController = SubscriberFormViewController()
@@ -57,6 +82,45 @@ class SubscriberDetailViewController: UIViewController {
         
         navigationController?.pushViewController(subscriberFormViewController, animated: true)
     }
+    
+    @IBAction func deleteSubscriberButtonAction(_ sender: Any) {
+        deleteSubscriber()
+    }
+    
+    // MARK: - Firebase service actions
+    
+    func updateSubscriber() {
+        guard let subscriber = subscriber else {
+            return
+        }
+        
+        firebaseService.updateSubscriber(subscriber, completion: { [weak self] result in
+            switch result {
+            case .success:
+                self?.emailLabel.text = subscriber.email
+                self?.nameLabel.text = subscriber.name
+                self?.stateView.setup(withState: subscriber.state, centered: true)
+                self?.updatedAtValueLabel.text = subscriber.updated.yearAndMonthAndDayAndTime
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
+    
+    func deleteSubscriber() {
+        guard let subscriber = subscriber else {
+            return
+        }
+        
+        firebaseService.deleteSubscriber(subscriber, completion: { [weak self] result in
+            switch result {
+            case .success:
+                self?.navigationController?.popViewController(animated: true)
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
 }
 
 // MARK: - SubscriberFormDelegate
@@ -64,10 +128,6 @@ class SubscriberDetailViewController: UIViewController {
 extension SubscriberDetailViewController: SubscriberFormDelegate {
     func didSubmitForm(subscriber: Subscriber) {
         self.subscriber = subscriber
-        
-        emailLabel.text = subscriber.email
-        nameLabel.text = subscriber.name
-        stateView.setup(withState: subscriber.state, centered: true)
-        updatedAtValueLabel.text = subscriber.updated.yearAndMonthAndDayAndTime
+        updateSubscriber()
     }
 }

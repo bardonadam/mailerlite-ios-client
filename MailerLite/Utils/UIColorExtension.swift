@@ -50,4 +50,5 @@ extension UIColor {
     static var Salem = UIColor(hex: "17924B")
     static var EggSour = UIColor(hex: "FFF3DE")
     static var PottersClay = UIColor(hex: "805841")
+    static var CarminePink = UIColor(hex: "E44E42")
 }

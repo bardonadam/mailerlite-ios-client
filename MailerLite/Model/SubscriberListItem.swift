@@ -28,6 +28,6 @@ extension SubscriberListItem: ListDiffable {
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
         guard self !== object else { return true }
         guard let object = object as? SubscriberListItem else { return false }
-        return subscriber.id == object.subscriber.id
+        return subscriber.id == object.subscriber.id && subscriber.updated == object.subscriber.updated
     }
 }

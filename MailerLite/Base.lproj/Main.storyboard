@@ -53,19 +53,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jovial_davinci@mailerlite.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZ2-5p-Y7Y">
-                                <rect key="frame" x="12" y="140" width="351" height="19"/>
+                                <rect key="frame" x="12" y="140" width="351" height="22"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jovial DaVinci" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-dv-gZP">
-                                <rect key="frame" x="12" y="171" width="351" height="20"/>
+                                <rect key="frame" x="12" y="174" width="351" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-mZ-wwg" customClass="StateView" customModule="MailerLite" customModuleProvider="target">
-                                <rect key="frame" x="130.5" y="211" width="114" height="20"/>
+                                <rect key="frame" x="130.5" y="217.5" width="114" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="9kb-x7-8hS"/>
@@ -73,36 +73,51 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkx-Jq-Ytp" userLabel="Divider View">
-                                <rect key="frame" x="16" y="263" width="343" height="1"/>
+                                <rect key="frame" x="16" y="269.5" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="J2X-KJ-Uib"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eld-pK-GLA">
-                                <rect key="frame" x="16" y="296" width="343" height="17.5"/>
+                                <rect key="frame" x="16" y="302.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Feb  2019 11:11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv0-3T-OxA">
-                                <rect key="frame" x="16" y="317.5" width="343" height="20"/>
+                                <rect key="frame" x="16" y="327" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated at:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udE-8h-A7n">
-                                <rect key="frame" x="16" y="369.5" width="343" height="17.5"/>
+                                <rect key="frame" x="16" y="382.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Feb  2019 11:11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61g-S4-ESp">
-                                <rect key="frame" x="16" y="391" width="343" height="20"/>
+                                <rect key="frame" x="16" y="407" width="343" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDk-rL-xJQ">
+                                <rect key="frame" x="107.5" y="591" width="160" height="50"/>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.30588235294117649" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="51D-g1-GVQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="aX0-r2-Jud"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                                <state key="normal" title="Delete Subscriber">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteSubscriberButtonAction:" destination="7uz-7f-MuX" eventType="touchUpInside" id="O8w-OF-4Cz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -124,15 +139,15 @@
                             <constraint firstItem="Z1i-ha-YcL" firstAttribute="centerX" secondItem="kKy-pG-WQS" secondAttribute="centerX" id="XUh-hc-y1S"/>
                             <constraint firstItem="udE-8h-A7n" firstAttribute="top" secondItem="Nv0-3T-OxA" secondAttribute="bottom" constant="32" id="aGW-s4-Y8M"/>
                             <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="Nv0-3T-OxA" secondAttribute="trailing" constant="16" id="aIK-zm-3uQ"/>
-                            <constraint firstItem="yZ2-5p-Y7Y" firstAttribute="centerX" secondItem="kKy-pG-WQS" secondAttribute="centerX" id="b7v-Ga-erD"/>
                             <constraint firstItem="xkx-Jq-Ytp" firstAttribute="leading" secondItem="kKy-pG-WQS" secondAttribute="leading" constant="16" id="dZX-W2-GpK"/>
                             <constraint firstItem="yZ2-5p-Y7Y" firstAttribute="leading" secondItem="kKy-pG-WQS" secondAttribute="leading" constant="12" id="ik8-tS-RXZ"/>
-                            <constraint firstItem="fGC-dv-gZP" firstAttribute="centerX" secondItem="yZ2-5p-Y7Y" secondAttribute="centerX" id="kQT-Rb-KPq"/>
                             <constraint firstItem="udE-8h-A7n" firstAttribute="leading" secondItem="Nv0-3T-OxA" secondAttribute="leading" id="kdh-Zd-vZj"/>
                             <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="udE-8h-A7n" secondAttribute="trailing" constant="16" id="mTS-GX-oMd"/>
+                            <constraint firstItem="zDk-rL-xJQ" firstAttribute="centerX" secondItem="kKy-pG-WQS" secondAttribute="centerX" id="p2Z-ek-nUH"/>
                             <constraint firstItem="eld-pK-GLA" firstAttribute="top" secondItem="xkx-Jq-Ytp" secondAttribute="bottom" constant="32" id="rDC-5j-OWi"/>
                             <constraint firstItem="xkx-Jq-Ytp" firstAttribute="centerX" secondItem="kKy-pG-WQS" secondAttribute="centerX" id="wjA-ht-DXH"/>
                             <constraint firstItem="fGC-dv-gZP" firstAttribute="leading" secondItem="kKy-pG-WQS" secondAttribute="leading" constant="12" id="xqh-XN-VQO"/>
+                            <constraint firstItem="kKy-pG-WQS" firstAttribute="bottom" secondItem="zDk-rL-xJQ" secondAttribute="bottom" constant="26" id="yKJ-jF-Fxf"/>
                             <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="yZ2-5p-Y7Y" secondAttribute="trailing" constant="12" id="ySX-mM-HaC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kKy-pG-WQS"/>
@@ -141,6 +156,7 @@
                         <outlet property="avaterImageView" destination="Z1i-ha-YcL" id="6ar-oj-OyG"/>
                         <outlet property="createdAtTitleLabel" destination="eld-pK-GLA" id="hsY-4C-TuS"/>
                         <outlet property="createdAtValueLabel" destination="Nv0-3T-OxA" id="489-2f-PKt"/>
+                        <outlet property="deleteSubscriberButton" destination="zDk-rL-xJQ" id="8x6-O0-rf9"/>
                         <outlet property="emailLabel" destination="yZ2-5p-Y7Y" id="pG4-zH-IKE"/>
                         <outlet property="nameLabel" destination="fGC-dv-gZP" id="vW9-pC-iM9"/>
                         <outlet property="stateView" destination="cLk-mZ-wwg" id="OlF-52-AAr"/>

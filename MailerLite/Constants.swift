@@ -49,6 +49,7 @@ struct Constants {
         struct SubscriberDetail {
             static var CreatedAt = "Created at:"
             static var UpdatedAt = "Updated at:"
+            static var DeleteButtonTitle = "Delete Subscriber"
         }
         
         struct State {
