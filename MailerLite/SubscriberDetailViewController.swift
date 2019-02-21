@@ -69,7 +69,14 @@ class SubscriberDetailViewController: UIViewController {
         deleteSubscriberButton.setTitle(Constants.Strings.SubscriberDetail.DeleteButtonTitle, for: .normal)
         deleteSubscriberButton.layer.masksToBounds = true
         deleteSubscriberButton.layer.cornerRadius = Constants.UI.CornerRadius
+
+        let emailTap = UITapGestureRecognizer(target: self, action: #selector(emailTapAction))
+        emailLabel.isUserInteractionEnabled = true
+        emailLabel.addGestureRecognizer(emailTap)
         
+        let nameTap = UITapGestureRecognizer(target: self, action: #selector(nameTapAction))
+        nameLabel.isUserInteractionEnabled = true
+        nameLabel.addGestureRecognizer(nameTap)
     }
     
     // MARK: - UI items actions
@@ -81,6 +88,14 @@ class SubscriberDetailViewController: UIViewController {
         subscriberFormViewController.delegate = self
         
         navigationController?.pushViewController(subscriberFormViewController, animated: true)
+    }
+
+    @objc func emailTapAction() {
+        UIPasteboard.general.string = emailLabel.text
+    }
+    
+    @objc func nameTapAction() {
+        UIPasteboard.general.string = nameLabel.text
     }
     
     @IBAction func deleteSubscriberButtonAction(_ sender: Any) {
