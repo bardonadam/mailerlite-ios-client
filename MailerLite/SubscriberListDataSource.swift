@@ -14,7 +14,19 @@ extension SubscriberListViewController: ListAdapterDataSource {
         var listItems = [ListDiffable]()
         
         for subscriber in self.subscribers {
-            listItems.append(SubscriberListItem(subscriber: subscriber))
+            switch filterState {
+            case .All:
+                listItems.append(SubscriberListItem(subscriber: subscriber))
+            case .Active:
+                if subscriber.state == .Active {
+                    listItems.append(SubscriberListItem(subscriber: subscriber))
+                }
+            case .Unsubscribed:
+                if subscriber.state == .Unsubscribed {
+                    listItems.append(SubscriberListItem(subscriber: subscriber))
+                }
+            }
+//            listItems.append(SubscriberListItem(subscriber: subscriber))
         }
         
         return listItems

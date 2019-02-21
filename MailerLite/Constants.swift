@@ -39,6 +39,7 @@ struct Constants {
         }
         
         static var CornerRadius: CGFloat = 6
+        static var FilterToolbarHeight: CGFloat = 50
     }
     
     // MARK: - Strings
@@ -62,6 +63,10 @@ struct Constants {
         struct EmptyView {
             static var Title = "No Subscribers Yet"
             static var Subtitle = "It looks a little empty in here!"
+        }
+        
+        struct Filter {
+            static var Title = "Show Subscribers:"
         }
     }
 }

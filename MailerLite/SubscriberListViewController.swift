@@ -22,7 +22,7 @@ class SubscriberListViewController: UIViewController {
     let collectionView: UICollectionView = {
         let view = UICollectionView(frame: CGRect.zero, collectionViewLayout: ListCollectionViewLayout(stickyHeaders: true, topContentInset: 0, stretchToEdge: false))
         view.backgroundColor = .LightGray
-        view.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset
+        view.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset + Constants.UI.FilterToolbarHeight
         return view
     }()
     
@@ -30,7 +30,10 @@ class SubscriberListViewController: UIViewController {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     }()
     
+    lazy var filterViewController = FilterViewController()
+    
     var subscribers = [Subscriber]()
+    var filterState: FilterState = .All
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +41,8 @@ class SubscriberListViewController: UIViewController {
         title = "Subscribers"
         
         var barButtonItems = [UIBarButtonItem]()
-        let editBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addBarButtonAction))
-        barButtonItems.append(editBarButtonItem)
+        let addBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addBarButtonAction))
+        barButtonItems.append(addBarButtonItem)
         
         navigationItem.rightBarButtonItems = barButtonItems
         
@@ -51,6 +54,9 @@ class SubscriberListViewController: UIViewController {
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         adapter.dataSource = self
+        
+        add(filterViewController)
+        filterViewController.setup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,7 +66,7 @@ class SubscriberListViewController: UIViewController {
             // If we are showing a navigation bar we need to change the y offset for the sticky headers as normal behaviour
             // of the UICollectionView to keep scrolling under the navigation bar. This case the sticky headers to end up below
             // this bar too hence this bit of calculation to determine what the correct y offset is
-            flowLayout.stickyHeaderYOffset = self.view.safeAreaLayoutGuide.layoutFrame.size.height + Constants.UI.SubscriberList.CollectionTopOffset
+            flowLayout.stickyHeaderYOffset = self.view.safeAreaLayoutGuide.layoutFrame.size.height + Constants.UI.SubscriberList.CollectionTopOffset + filterViewController.getTotalHeight()
             collectionView.collectionViewLayout = flowLayout
         }
         
@@ -114,10 +120,10 @@ class SubscriberListViewController: UIViewController {
     }
     
     @objc func pullToRefresh() {
-        collectionView.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset + 70
+        collectionView.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset + filterViewController.getTotalHeight() + 70
         loadSubscribers(completion: {
             self.collectionView.refreshControl?.endRefreshing()
-            self.collectionView.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset
+            self.collectionView.contentInset.top = Constants.UI.SubscriberList.CollectionTopOffset + self.filterViewController.getTotalHeight()
         })
     }
 }
@@ -141,6 +147,15 @@ extension SubscriberListViewController: SubscriberListSectionDelegate {
 extension SubscriberListViewController: SubscriberFormDelegate {
     func didSubmitForm(subscriber: Subscriber) {
         addSubscriber(subscriber: subscriber)
+    }
+}
+
+// MARK: - FilterToolbarProtocol
+
+extension SubscriberListViewController: FilterToolbarProtocol {
+    func didChangeFilter(filterState: FilterState) {
+        self.filterState = filterState
+        adapter.performUpdates(animated: true)
     }
 }
 
