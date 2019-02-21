@@ -28,6 +28,6 @@ extension SubscriberListViewController: ListAdapterDataSource {
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return UIView()
+        return EmptyView()
     }
 }

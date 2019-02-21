@@ -58,5 +58,10 @@ struct Constants {
             static var Active = "Active"
             static var Unsubscribed = "Unsubscribed"
         }
+        
+        struct EmptyView {
+            static var Title = "No Subscribers Yet"
+            static var Subtitle = "It looks a little empty in here!"
+        }
     }
 }

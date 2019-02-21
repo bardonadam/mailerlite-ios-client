@@ -42,6 +42,8 @@
 		85372C6F221DB89000122BFD /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C6E221DB89000122BFD /* UIViewExtension.swift */; };
 		855F5FE4221DC9AD004228DC /* SubscriberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */; };
 		855F5FE6221DECDB004228DC /* SubscriberFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F5FE5221DECDB004228DC /* SubscriberFormViewController.swift */; };
+		855F5FE9221F270E004228DC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F5FE8221F270E004228DC /* EmptyView.swift */; };
+		855F5FEB221F277A004228DC /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855F5FEA221F277A004228DC /* EmptyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,8 @@
 		85372C6E221DB89000122BFD /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberDetailViewController.swift; sourceTree = "<group>"; };
 		855F5FE5221DECDB004228DC /* SubscriberFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberFormViewController.swift; sourceTree = "<group>"; };
+		855F5FE8221F270E004228DC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		855F5FEA221F277A004228DC /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +218,7 @@
 		85372C5F221C882C00122BFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				855F5FE7221F26E6004228DC /* EmptyView */,
 				85372C69221DB63600122BFD /* StateView */,
 				85372C60221C887600122BFD /* SubscriberListItemCell */,
 			);
@@ -236,6 +241,15 @@
 				85372C6C221DB66C00122BFD /* StateView.xib */,
 			);
 			path = StateView;
+			sourceTree = "<group>";
+		};
+		855F5FE7221F26E6004228DC /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				855F5FE8221F270E004228DC /* EmptyView.swift */,
+				855F5FEA221F277A004228DC /* EmptyView.xib */,
+			);
+			path = EmptyView;
 			sourceTree = "<group>";
 		};
 		CCF91D991085951363D42128 /* Pods */ = {
@@ -315,6 +329,7 @@
 				85372C22221B06E100122BFD /* Assets.xcassets in Resources */,
 				85372C20221B06DE00122BFD /* Main.storyboard in Resources */,
 				85372C4F221BD8CB00122BFD /* OpenSans-Semibold.ttf in Resources */,
+				855F5FEB221F277A004228DC /* EmptyView.xib in Resources */,
 				85372C56221BD8CB00122BFD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				85372C51221BD8CB00122BFD /* OpenSans-Italic.ttf in Resources */,
 				85372C6D221DB66C00122BFD /* StateView.xib in Resources */,
@@ -405,6 +420,7 @@
 				85372C39221B546600122BFD /* Constants.swift in Sources */,
 				85372C5A221BD93600122BFD /* Appearance.swift in Sources */,
 				85372C1D221B06DE00122BFD /* SubscriberListViewController.swift in Sources */,
+				855F5FE9221F270E004228DC /* EmptyView.swift in Sources */,
 				85372C37221B51E800122BFD /* FirebaseServiceFactory.swift in Sources */,
 				855F5FE6221DECDB004228DC /* SubscriberFormViewController.swift in Sources */,
 				85372C6F221DB89000122BFD /* UIViewExtension.swift in Sources */,
