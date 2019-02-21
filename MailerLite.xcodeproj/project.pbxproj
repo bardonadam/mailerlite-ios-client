@@ -41,6 +41,7 @@
 		85372C6D221DB66C00122BFD /* StateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85372C6C221DB66C00122BFD /* StateView.xib */; };
 		85372C6F221DB89000122BFD /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372C6E221DB89000122BFD /* UIViewExtension.swift */; };
 		855F5FE4221DC9AD004228DC /* SubscriberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */; };
+		855F5FE6221DECDB004228DC /* SubscriberFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855F5FE5221DECDB004228DC /* SubscriberFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		85372C6C221DB66C00122BFD /* StateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateView.xib; sourceTree = "<group>"; };
 		85372C6E221DB89000122BFD /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberDetailViewController.swift; sourceTree = "<group>"; };
+		855F5FE5221DECDB004228DC /* SubscriberFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberFormViewController.swift; sourceTree = "<group>"; };
 		B332FBB5F66C15F490C6A544 /* Pods-MailerLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MailerLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,12 +138,13 @@
 				85372C1C221B06DE00122BFD /* SubscriberListViewController.swift */,
 				85372C65221CAAA300122BFD /* SubscriberListDataSource.swift */,
 				85372C5D221C819000122BFD /* SubscriberListSectionController.swift */,
+				855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */,
 				85372C1E221B06DE00122BFD /* Main.storyboard */,
 				85372C21221B06E100122BFD /* Assets.xcassets */,
 				85372C23221B06E100122BFD /* LaunchScreen.storyboard */,
 				85372C26221B06E100122BFD /* Info.plist */,
 				85372C2D221B125600122BFD /* GoogleService-Info.plist */,
-				855F5FE3221DC9AD004228DC /* SubscriberDetailViewController.swift */,
+				855F5FE5221DECDB004228DC /* SubscriberFormViewController.swift */,
 			);
 			path = MailerLite;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MailerLite/Pods-MailerLite-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -351,6 +355,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -401,6 +406,7 @@
 				85372C5A221BD93600122BFD /* Appearance.swift in Sources */,
 				85372C1D221B06DE00122BFD /* SubscriberListViewController.swift in Sources */,
 				85372C37221B51E800122BFD /* FirebaseServiceFactory.swift in Sources */,
+				855F5FE6221DECDB004228DC /* SubscriberFormViewController.swift in Sources */,
 				85372C6F221DB89000122BFD /* UIViewExtension.swift in Sources */,
 				85372C66221CAAA300122BFD /* SubscriberListDataSource.swift in Sources */,
 				85372C41221B6F5100122BFD /* UIColorExtension.swift in Sources */,

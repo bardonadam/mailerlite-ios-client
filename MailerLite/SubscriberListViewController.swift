@@ -42,6 +42,12 @@ class SubscriberListViewController: UIViewController {
         
         title = "Subscribers"
         
+        var barButtonItems = [UIBarButtonItem]()
+        let editBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addBarButtonAction))
+        barButtonItems.append(editBarButtonItem)
+        
+        navigationItem.rightBarButtonItems = barButtonItems
+        
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         refreshControl.tintColor = .Bunker
@@ -70,6 +76,14 @@ class SubscriberListViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         collectionView.frame = view.bounds
+    }
+    
+    @objc func addBarButtonAction() {
+        let subscriberFormViewController = SubscriberFormViewController()
+        subscriberFormViewController.formType = .NewSubscriber
+        subscriberFormViewController.delegate = self
+        
+        navigationController?.pushViewController(subscriberFormViewController, animated: true)
     }
     
     /// - Parameter handler: optional block to handle once the subscribers have been loaded.
@@ -112,7 +126,18 @@ extension SubscriberListViewController: SubscriberListSectionDelegate {
                 }
         
                 nextController.subscriber = subscriberListItem.subscriber
-                self.navigationController?.pushViewController(nextController, animated: true)
+                navigationController?.pushViewController(nextController, animated: true)
     }
 }
+
+// MARK: - SubscriberFormDelegate
+
+extension SubscriberListViewController: SubscriberFormDelegate {
+    func didSubmitForm(subscriber: Subscriber) {
+        subscribers.append(subscriber)
+        subscribers.sort(by: { $0.created > $1.created})
+        adapter.performUpdates(animated: true)
+    }
+}
+
 

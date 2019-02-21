@@ -53,19 +53,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jovial_davinci@mailerlite.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZ2-5p-Y7Y">
-                                <rect key="frame" x="12" y="140" width="351" height="22"/>
+                                <rect key="frame" x="12" y="140" width="351" height="19"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jovial DaVinci" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-dv-gZP">
-                                <rect key="frame" x="12" y="174" width="351" height="24"/>
+                                <rect key="frame" x="12" y="171" width="351" height="20"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-mZ-wwg" customClass="StateView" customModule="MailerLite" customModuleProvider="target">
-                                <rect key="frame" x="130.5" y="218" width="114" height="20"/>
+                                <rect key="frame" x="130.5" y="211" width="114" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="9kb-x7-8hS"/>
@@ -73,32 +73,32 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkx-Jq-Ytp" userLabel="Divider View">
-                                <rect key="frame" x="16" y="270" width="343" height="1"/>
+                                <rect key="frame" x="16" y="263" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="J2X-KJ-Uib"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eld-pK-GLA">
-                                <rect key="frame" x="16" y="303" width="83" height="20.5"/>
+                                <rect key="frame" x="16" y="296" width="343" height="17.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Feb  2019 11:11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv0-3T-OxA">
-                                <rect key="frame" x="16" y="327.5" width="148.5" height="24"/>
+                                <rect key="frame" x="16" y="317.5" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated at:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udE-8h-A7n">
-                                <rect key="frame" x="16" y="383.5" width="88" height="20.5"/>
+                                <rect key="frame" x="16" y="369.5" width="343" height="17.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 Feb  2019 11:11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61g-S4-ESp">
-                                <rect key="frame" x="16" y="408" width="148.5" height="24"/>
+                                <rect key="frame" x="16" y="391" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -111,9 +111,11 @@
                             <constraint firstItem="xkx-Jq-Ytp" firstAttribute="top" secondItem="cLk-mZ-wwg" secondAttribute="bottom" constant="32" id="0oh-ZP-HsZ"/>
                             <constraint firstItem="Z1i-ha-YcL" firstAttribute="top" secondItem="kKy-pG-WQS" secondAttribute="top" constant="40" id="37o-gI-z26"/>
                             <constraint firstItem="Nv0-3T-OxA" firstAttribute="top" secondItem="eld-pK-GLA" secondAttribute="bottom" constant="4" id="3o9-3z-7Id"/>
+                            <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="61g-S4-ESp" secondAttribute="trailing" constant="16" id="4Ay-R8-U6x"/>
                             <constraint firstItem="Nv0-3T-OxA" firstAttribute="leading" secondItem="eld-pK-GLA" secondAttribute="leading" id="5oJ-IO-1bn"/>
                             <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="fGC-dv-gZP" secondAttribute="trailing" constant="12" id="Aw0-1i-gaa"/>
                             <constraint firstItem="fGC-dv-gZP" firstAttribute="top" secondItem="yZ2-5p-Y7Y" secondAttribute="bottom" constant="12" id="CNi-Z9-ueW"/>
+                            <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="eld-pK-GLA" secondAttribute="trailing" constant="16" id="Dif-np-gie"/>
                             <constraint firstItem="61g-S4-ESp" firstAttribute="top" secondItem="udE-8h-A7n" secondAttribute="bottom" constant="4" id="J1j-h6-Dvh"/>
                             <constraint firstItem="cLk-mZ-wwg" firstAttribute="top" secondItem="fGC-dv-gZP" secondAttribute="bottom" constant="20" id="Pq1-SC-3e0"/>
                             <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="xkx-Jq-Ytp" secondAttribute="trailing" constant="16" id="RrQ-xg-0Sr"/>
@@ -121,11 +123,13 @@
                             <constraint firstItem="61g-S4-ESp" firstAttribute="leading" secondItem="udE-8h-A7n" secondAttribute="leading" id="UQC-25-nLg"/>
                             <constraint firstItem="Z1i-ha-YcL" firstAttribute="centerX" secondItem="kKy-pG-WQS" secondAttribute="centerX" id="XUh-hc-y1S"/>
                             <constraint firstItem="udE-8h-A7n" firstAttribute="top" secondItem="Nv0-3T-OxA" secondAttribute="bottom" constant="32" id="aGW-s4-Y8M"/>
+                            <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="Nv0-3T-OxA" secondAttribute="trailing" constant="16" id="aIK-zm-3uQ"/>
                             <constraint firstItem="yZ2-5p-Y7Y" firstAttribute="centerX" secondItem="kKy-pG-WQS" secondAttribute="centerX" id="b7v-Ga-erD"/>
                             <constraint firstItem="xkx-Jq-Ytp" firstAttribute="leading" secondItem="kKy-pG-WQS" secondAttribute="leading" constant="16" id="dZX-W2-GpK"/>
                             <constraint firstItem="yZ2-5p-Y7Y" firstAttribute="leading" secondItem="kKy-pG-WQS" secondAttribute="leading" constant="12" id="ik8-tS-RXZ"/>
                             <constraint firstItem="fGC-dv-gZP" firstAttribute="centerX" secondItem="yZ2-5p-Y7Y" secondAttribute="centerX" id="kQT-Rb-KPq"/>
                             <constraint firstItem="udE-8h-A7n" firstAttribute="leading" secondItem="Nv0-3T-OxA" secondAttribute="leading" id="kdh-Zd-vZj"/>
+                            <constraint firstItem="kKy-pG-WQS" firstAttribute="trailing" secondItem="udE-8h-A7n" secondAttribute="trailing" constant="16" id="mTS-GX-oMd"/>
                             <constraint firstItem="eld-pK-GLA" firstAttribute="top" secondItem="xkx-Jq-Ytp" secondAttribute="bottom" constant="32" id="rDC-5j-OWi"/>
                             <constraint firstItem="xkx-Jq-Ytp" firstAttribute="centerX" secondItem="kKy-pG-WQS" secondAttribute="centerX" id="wjA-ht-DXH"/>
                             <constraint firstItem="fGC-dv-gZP" firstAttribute="leading" secondItem="kKy-pG-WQS" secondAttribute="leading" constant="12" id="xqh-XN-VQO"/>

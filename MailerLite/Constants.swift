@@ -51,7 +51,7 @@ struct Constants {
             static var UpdatedAt = "Updated at:"
         }
         
-        struct StateView {
+        struct State {
             static var Active = "Active"
             static var Unsubscribed = "Unsubscribed"
         }

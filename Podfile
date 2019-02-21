@@ -9,5 +9,6 @@ target 'MailerLite' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'IGListKit'
+  pod 'Eureka', '~> 4.3.1'
 
 end

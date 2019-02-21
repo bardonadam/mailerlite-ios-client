@@ -23,6 +23,12 @@ class SubscriberDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var barButtonItems = [UIBarButtonItem]()
+        let editBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editBarButtonAction))
+        barButtonItems.append(editBarButtonItem)
+        
+        navigationItem.rightBarButtonItems = barButtonItems
+        
         avaterImageView.layer.masksToBounds = true
         avaterImageView.layer.cornerRadius = avaterImageView.frame.width / 2
         
@@ -41,5 +47,27 @@ class SubscriberDetailViewController: UIViewController {
         updatedAtTitleLabel.text = Constants.Strings.SubscriberDetail.UpdatedAt
         updatedAtValueLabel.text = subscriber?.updated.yearAndMonthAndDayAndTime
         
+    }
+    
+    @objc func editBarButtonAction() {
+        let subscriberFormViewController = SubscriberFormViewController()
+        subscriberFormViewController.subscriber = subscriber
+        subscriberFormViewController.formType = .UpdateSubscriber
+        subscriberFormViewController.delegate = self
+        
+        navigationController?.pushViewController(subscriberFormViewController, animated: true)
+    }
+}
+
+// MARK: - SubscriberFormDelegate
+
+extension SubscriberDetailViewController: SubscriberFormDelegate {
+    func didSubmitForm(subscriber: Subscriber) {
+        self.subscriber = subscriber
+        
+        emailLabel.text = subscriber.email
+        nameLabel.text = subscriber.name
+        stateView.setup(withState: subscriber.state, centered: true)
+        updatedAtValueLabel.text = subscriber.updated.yearAndMonthAndDayAndTime
     }
 }

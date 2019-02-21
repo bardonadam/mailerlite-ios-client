@@ -24,8 +24,8 @@ struct Subscriber {
     /// - Active
     /// - Unsubscribed
     enum State: Int {
-        case Active = 1
-        case Unsubscribed = 0
+        case Active
+        case Unsubscribed
     }
     
     /// Used as a parameter to get formatted date
@@ -65,6 +65,16 @@ struct Subscriber {
         self.state = state
         self.created = created.dateValue()
         self.updated = updated.dateValue()
+    }
+    
+    /// Initializes Subscriber from its properties
+    init(email: String, name: String, state: State, created: Date?, updated: Date?) {
+        self.id = "QueryDocumentSnapshot.id"
+        self.email = email
+        self.name = name
+        self.state = state
+        self.created = created ?? Date()
+        self.updated = updated ?? Date()
     }
     
     /// Returns formatted date based on date type

@@ -50,12 +50,13 @@ class StateView: UIView {
             
             contentView.backgroundColor = .OffGreen
             label.textColor = .Salem
-            label.text = Constants.Strings.StateView.Active
+            label.text = Constants.Strings.State.Active
         case .Unsubscribed:
-            contentView.frame.size.width = Constants.Layout.StateView.Unsubscribed
+            contentView.frame.size.width = Constants.Layout.StateView.Unsubscribed            
+            contentView.frame.origin.x = 0
             contentView.backgroundColor = .EggSour
             label.textColor = .PottersClay
-            label.text = Constants.Strings.StateView.Unsubscribed
+            label.text = Constants.Strings.State.Unsubscribed
         }
     }
 }
