@@ -1,6 +1,6 @@
 # MailerLite iOS Client 📱  
 
-<img src=https://github.com/bardonadam/mailerlite-ios-client/raw/master/screenshots.png height="720"/>
+<img src=https://github.com/bardonadam/mailerlite-ios-client/raw/master/screenshots.png/>
 
 
 ## Features
@@ -31,5 +31,6 @@ $ pod install --repo-update (in case you get warning about out-of-date source re
 $ open MailerLite.xcworkspace
 ```
 
+3. Hit the Run button (or Command + R shortcut) to run the app in the simulator.
 
 
